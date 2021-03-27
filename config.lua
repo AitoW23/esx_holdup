@@ -15,7 +15,7 @@ Config.GiveBlackMoney = true -- give black money? If disabled it will give cash 
 
 Stores = {
 	["delperro_lifeinvader"] = {
-		position = { x = -1044.193, y = -236.9535, z = 37.96496 },
+		position = { x = -1054.14, y = -230,84, z = 44,02 },
 		reward = math.random(7000, 100000),
 		nameOfStore = "Lifeinvader. (Los Santos)",
 		secondsRemaining = 240, -- seconds
