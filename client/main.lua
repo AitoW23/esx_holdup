@@ -23,18 +23,18 @@ function drawTxt(x,y, width, height, scale, text, r,g,b,a, outline)
 	EndTextCommandDisplayText(x - width/2, y - height/2 + 0.005)
 end
 
-RegisterNetEvent('esx_holdup:currentlyRobbing')
-AddEventHandler('esx_holdup:currentlyRobbing', function(currentStore)
+RegisterNetEvent('esx_holduplifeinvader:currentlyRobbing')
+AddEventHandler('esx_holduplifeinvader:currentlyRobbing', function(currentStore)
 	holdingUp, store = true, currentStore
 end)
 
-RegisterNetEvent('esx_holdup:killBlip')
-AddEventHandler('esx_holdup:killBlip', function()
+RegisterNetEvent('esx_holduplifeinvader:killBlip')
+AddEventHandler('esx_holdupholduplifeinvader:killBlip', function()
 	RemoveBlip(blipRobbery)
 end)
 
-RegisterNetEvent('esx_holdup:setBlip')
-AddEventHandler('esx_holdup:setBlip', function(position)
+RegisterNetEvent('esx_holduplifeinvader:setBlip')
+AddEventHandler('esx_holduplifeinvader:setBlip', function(position)
 	blipRobbery = AddBlipForCoord(position.x, position.y, position.z)
 
 	SetBlipSprite(blipRobbery, 161)
@@ -44,20 +44,20 @@ AddEventHandler('esx_holdup:setBlip', function(position)
 	PulseBlip(blipRobbery)
 end)
 
-RegisterNetEvent('esx_holdup:tooFar')
-AddEventHandler('esx_holdup:tooFar', function()
+RegisterNetEvent('esx_holduplifeinvader:tooFar')
+AddEventHandler('esx_holduplifeinvader:tooFar', function()
 	holdingUp, store = false, ''
 	ESX.ShowNotification(_U('robbery_cancelled'))
 end)
 
-RegisterNetEvent('esx_holdup:robberyComplete')
-AddEventHandler('esx_holdup:robberyComplete', function(award)
+RegisterNetEvent('esx_holduplifeinvader:robberyComplete')
+AddEventHandler('esx_holduplifeinvader:robberyComplete', function(award)
 	holdingUp, store = false, ''
 	ESX.ShowNotification(_U('robbery_complete', award))
 end)
 
-RegisterNetEvent('esx_holdup:startTimer')
-AddEventHandler('esx_holdup:startTimer', function()
+RegisterNetEvent('esx_holduplifeinvader:startTimer')
+AddEventHandler('esx_holduplifeinvader:startTimer', function()
 	local timer = Stores[store].secondsRemaining
 
 	Citizen.CreateThread(function()
