@@ -76,7 +76,7 @@ AddEventHandler('esx_holdup:robberyStarted', function(currentStore)
 							TriggerClientEvent('esx_holdup:robberyComplete', _source, store.reward)
 
 							if Config.GiveBlackMoney then
-								xPlayer.addInventoryItem('item_prototyyppipuhelin', store.reward)
+								xPlayer.addInventoryItem('prototyyppipuhelin',1)
 							else
 								xPlayer.addInventoryItem(store.reward)
 							end
