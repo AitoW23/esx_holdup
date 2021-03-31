@@ -76,9 +76,9 @@ AddEventHandler('esx_holdup:robberyStarted', function(currentStore)
 							TriggerClientEvent('esx_holdup:ryöstö_valmis', _source, store.reward)
 
 							if Config.GiveBlackMoney then
-								xPlayer.addAccountMoney('black_money', store.reward)
+								xPlayer.addInventoryItem('item_prototyyppipuhelin', store.reward)
 							else
-								xPlayer.addMoney(store.reward)
+								xPlayer.addInventoryItem(store.reward)
 							end
 							
 							local xPlayers, xPlayer = ESX.GetPlayers(), nil
