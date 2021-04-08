@@ -17,7 +17,7 @@ Stores = {
 	["delperro_lifeinvader"] = {
 		position = { x = -1054.14, y = -230,84, z = 44,02 },
 		reward = math.random(7000, 100000),
-		nameOfStore = "Lifeinvader. (Los Santos)",
+		nameOfStore = "Lifeinvader talo. (Los Santos)",
 		secondsRemaining = 240, -- seconds
 		lastRobbed = 0
 	},
