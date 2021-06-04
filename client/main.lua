@@ -105,7 +105,7 @@ Citizen.CreateThread(function()
 					DrawMarker(Config.Marker.Type, storePos.x, storePos.y, storePos.z - 1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Config.Marker.x, Config.Marker.y, Config.Marker.z, Config.Marker.r, Config.Marker.g, Config.Marker.b, Config.Marker.a, false, false, 2, false, false, false, false)
 
 					if distance < 0.5 then
-						ESX.ShowHelpNotification(_U('press_to_rob', v.nameOfStore))
+						ESX.ShowHelpNotification(_U('Paina_Ryöstääksesi', v.nameOfStore))
 
 						if IsControlJustReleased(0, 38) then
 							if IsPedArmed(PlayerPedId(), 4) then
